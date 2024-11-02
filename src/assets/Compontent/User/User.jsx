@@ -1,18 +1,18 @@
+import { Link } from "react-router-dom";
 
 
 export default function User({ user }) {
-    const { name, id, username , address, email, phone, website, company } = user;
+    const { name, id, email,  website } = user;
     return (
         <>
             <div className="border-2 border-red-300 rounded-2xl m-4 p-4 ">
-                <p>Name : {name} </p>
-                <p>Username: {username} </p>
-                <p>UserID : {id} </p>
-                <p>address : {address.city} </p>
+                <p className="text-xl font-bold">Name : {name} </p>
                 <p>email : {email} </p>
-                <p>phone : {phone} </p>
                 <p>website : {website} </p>
-                <p>Company : {company.name}</p>
+                <Link to={`/user/${id}`}> 
+                    <button className="btn w-full btn-outline mx-auto mt-4">Show Details</button>
+                </Link>
+
             </div>
         </>
     )
