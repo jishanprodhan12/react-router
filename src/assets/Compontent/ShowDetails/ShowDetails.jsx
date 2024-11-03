@@ -1,10 +1,13 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { useLoaderData, useNavigate } from "react-router-dom"
 
 export default function ShowDetails() {
     const singleUser = useLoaderData();
     console.log(singleUser);
     const { name, id, username, address, email, phone, website, company } = singleUser;
-
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+            navigate(-1);
+    }
     return (
         <>
             <div className="text-3xl text-rose-300 my-5 text-center">Show Details </div>
@@ -17,7 +20,7 @@ export default function ShowDetails() {
                 <p>phone : {phone} </p>
                 <p>website : {website} </p>
                 <p>Company : {company.name}</p>
-                <Link to="/users"> <button className="btn w-full mx-auto btn-outline bg-orange-200 my-5">Go back </button></Link>
+                <button onClick={handleGoBack} className="btn w-full mx-auto btn-outline bg-orange-200 my-5">Go back</button>
             </div>
         </>
 
