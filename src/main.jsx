@@ -10,11 +10,13 @@ import ShowDetails from './assets/Compontent/ShowDetails/ShowDetails'
 import Posts from './assets/Compontent/Posts/Posts'
 import Post from './assets/Compontent/Post/Post'
 import PostDetails from './assets/Compontent/PostDetails/PostDetails'
+import ErrorPage from './assets/Compontent/ErrorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    errorElement : <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/body',
