@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-
+import './Navbar.css'
 export default function Navbar() {
     return (
         <div className="navbar bg-base-100">
@@ -23,10 +23,10 @@ export default function Navbar() {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <Link to="/body">Body</Link>
-                        <Link to="/contact">Contact us</Link>
-                        <Link to="/users">Users</Link>
-                        <Link to="/posts">Posts</Link>
+                        <NavLink to="/body">Body</NavLink>
+                        <NavLink to="/contact">Contact us</NavLink>
+                        <NavLink to="/users">Users</NavLink>
+                        <NavLink to="/posts">Posts</NavLink>
 
                     </ul>
                 </div>
@@ -34,10 +34,10 @@ export default function Navbar() {
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal gap-6 px-1">
-                    <Link to="/body">Body</Link>
-                    <Link to="/contact">Contact us</Link>
-                    <Link to="/users">Users</Link>
-                    <Link to="/posts">Posts</Link>
+                    <NavLink to="/body">Body</NavLink>
+                    <NavLink to="/contact">Contact us</NavLink>
+                    <NavLink to="/users">Users</NavLink>
+                    <NavLink to="/posts">Posts</NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
